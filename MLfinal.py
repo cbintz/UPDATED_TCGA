@@ -36,7 +36,7 @@ def main():
 
     # RANDOMLY SELECT 2500 GENES AND CLUSTER WITH DENDROGRAM TO SHOW THAT PATIENTS SEGREGATE BASED ON SURVIVAL STATUS
     # rand = random.sample(range(0, 2500), 2500) # randomly select 2500 genes to use for clustering patients
-    # randomGenes = limitGenes(rand, geneData[2]) # get patient gene data for these randomly selected genes
+    # randomGenes = limitGenes(rand, geneData[2], geneData[0]) # get patient gene data for these randomly selected genes
     # randCluster = makeClusters(randomGenes) # make clusters from random genes
     # makeRandomDendrogram(randomGenes[0], geneData[1])
 
@@ -52,7 +52,7 @@ def main():
     # PROCESS FOR FEATURE SELECTION USING MUTUAL INFORMATION CLASSIFICATION
     # dv = DictVectorizer()
     # dv.fit(geneSubset[1])
-    # selectedFeatures = selectFeaturesMutual(dv, geneSubset[0], a) # mutual info
+    # selectedFeatures = selectFeaturesMutual(dv, geneSubset[0], survivalLabels) # mutual info
 
     # PROCESS FOR FEATURE SELECTION USING STEP FORWARD SELECTION
     # selectedFeatures50 = selectFeatures50(geneSubset[0], a) #sfs
